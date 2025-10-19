@@ -24,6 +24,24 @@ class ApplicationTest extends NsTest {
         );
     }
 
+    @Test
+    void default_delemiter_test1() {
+        assertSimpleTest(() -> {
+            run("1:2:3");
+            assertThat(output()).contains("결과 : 6");
+        });
+    }
+
+    @Test
+    void default_delemiter_test2() {
+        assertSimpleTest(() -> {
+            run("1,2,3");
+            assertThat(output()).contains("결과 : 6");
+        });
+    }
+
+
+
     @Override
     public void runMain() {
         Application.main(new String[]{});
