@@ -22,6 +22,7 @@ public class StringSplitter {
         String customDelimiter = text.substring(2, delimiterEndIdx);
         String numberString = text.substring(delimiterEndIdx + 2);
 
-        return numberString.split(customDelimiter);
+        String safeDelimiter = Pattern.quote(customDelimiter);
+        return numberString.split(safeDelimiter);
     }
 }
