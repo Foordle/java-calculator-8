@@ -48,6 +48,7 @@ class ApplicationTest extends NsTest {
         });
     }
 
+    @Test
     void 커스텀_구분자_사용2() {
         assertSimpleTest(() -> {
             run("//?\\n1?2?3");
@@ -55,12 +56,14 @@ class ApplicationTest extends NsTest {
         });
     }
 
+    @Test
     void 커스텀_구분자_사용3() {
         assertSimpleTest(() -> {
             run("//d\\n1d2d3");
             assertThat(output()).contains("결과 : 6");
         });
     }
+
 
 
 

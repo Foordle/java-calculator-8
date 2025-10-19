@@ -11,6 +11,7 @@ public class Calculator {
         }
 
         String[] numbers = splitter.split(text);
+        validator.validateNumbers(numbers);
         return summer.sum(numbers);
     }
 
