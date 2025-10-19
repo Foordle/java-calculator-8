@@ -6,7 +6,6 @@ public class Calculator {
     private final NumberSummer summer = new NumberSummer();
 
     public int add(final String text) {
-
         if (validator.isEmpty(text)) {
             return 0;
         }
